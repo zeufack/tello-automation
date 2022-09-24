@@ -13,6 +13,6 @@
   },
   "scripts": {
     "test": "wdio run ./wdio.conf.ts",
-    "test:android": "wdio run ./test/runner/android.runner.conf.ts"
+    "test:android": "wdio run ./config/wdio.android.ts"
   }
 }

@@ -1,7 +1,7 @@
 import type { Options } from "@wdio/types";
 import { join } from "path";
 
-export const config: Options.Testrunner = {
+export const config = {
   //
   // ====================
   // Runner Configuration
@@ -79,28 +79,7 @@ export const config: Options.Testrunner = {
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
   // https://saucelabs.com/platform/platform-configurator
   //
-  capabilities: [
-    {
-      path: "/wd/hub",
-      // The defaults you need to have in your config
-      platformName: "Android",
-      maxInstances: 1,
-
-      // For W3C the appium capabilities need to have an extension prefix
-      // http://appium.io/docs/en/writing-running-appium/caps/
-      // This is `appium:` for all Appium Capabilities which can be found here
-      "appium:deviceName": "26719008c51c7ece",
-      "appium:platformVersion": "10",
-      "appium:orientation": "PORTRAIT",
-      "appium:automationName": "UiAutomator2",
-      // The path to the app
-      "appium:app": join(process.cwd(), "./assets/app/app-release.apk"),
-      // @ts-ignore
-      "appium:appWaitActivity": "com.bazzptt.bazz_flutter.MainActivity",
-      "appium:appPackage": "com.bazzptt.bazz_flutter",
-      "appium:newCommandTimeout": 240,
-    },
-  ],
+  capabilities: [],
   //
   // ===================
   // Test Configurations
@@ -153,6 +132,7 @@ export const config: Options.Testrunner = {
       "appium",
       {
         command: "appium",
+        logPath: "./",
       },
     ],
   ],
