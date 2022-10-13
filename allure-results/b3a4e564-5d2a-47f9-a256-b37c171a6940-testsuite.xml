@@ -1,0 +1,93 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1665561412772' stop='1665561412783'>
+    <name>Log into Tello mobile application: As a user, I can log into my account</name>
+    <title>Log into Tello mobile application: As a user, I can log into my account</title>
+    <test-cases>
+        <test-case start='1665561412774' status='passed' stop='1665561412775'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='26719008c51c7ece-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1665561412775' status='broken' stop='1665561412782'>
+            <name>Given I am on the login page</name>
+            <title>Given I am on the login page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='26719008c51c7ece-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: function uses multiple asynchronous interfaces: callback and promise</message>
+                <stack-trace>Error: function uses multiple asynchronous interfaces: callback and promise
+                to use the callback interface: do not return a promise
+                to use the promise interface: remove the last argument to the function
+                    at Object.run (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/user_code_runner.ts:50:16)
+                    at Object.run (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:41)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async TestCaseRunner.invokeStep (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:130:12)
+                    at async TestCaseRunner.runStep (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:312:20)
+                    at async /home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:214:36
+                    at async TestCaseRunner.aroundTestStep (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:162:28)
+                    at async TestCaseRunner.run (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:192:9)
+                    at async Runtime.runTestCase (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/index.ts:91:20)
+                    at async Runtime.start (/home/zeufack/programing/javascript/tello-automation/node_modules/@cucumber/cucumber/src/runtime/index.ts:121:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1665561412782' status='pending' stop='1665561412782'>
+            <name>When I login with Igard and Igard123</name>
+            <title>When I login with Igard and Igard123</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='26719008c51c7ece-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1665561412782' status='pending' stop='1665561412782'>
+            <name>Then I should see a flash message saying &lt;message></name>
+            <title>Then I should see a flash message saying &lt;message></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='26719008c51c7ece-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1665561412782' status='passed' stop='1665561412782'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='26719008c51c7ece-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

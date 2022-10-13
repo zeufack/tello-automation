@@ -13,9 +13,9 @@ config.capabilities = [
     "appium:orientation": "PORTRAIT",
     "appium:automationName": "Flutter",
     // The path to the app
-    "appium:app": join(process.cwd(), "./assets/app/app-release.apk"),
+    "appium:app": join(process.cwd(), "./assets/app/app-debug.apk"),
     // @ts-ignore
-    "appium:appWaitActivity": "com.bazzptt.bazz_flutter.MainActivity",
+    "appium:appActivity": "com.bazzptt.bazz_flutter.MainActivity",
     "appium:appPackage": "com.bazzptt.bazz_flutter",
     "appium:newCommandTimeout": 240,
   },
