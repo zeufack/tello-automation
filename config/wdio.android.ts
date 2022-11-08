@@ -13,11 +13,11 @@ config.capabilities = [
     "appium:orientation": "PORTRAIT",
     "appium:automationName": "UiAutomator2",
     // The path to the app
-    "appium:app": join(process.cwd(), "./assets/app/app-release.apk"),
+    "appium:app": join(process.cwd(), "./assets/app/tello-app-debug-v2.apk"),
     // @ts-ignore
-    // "appium:appWaitActivity": "com.bazzptt.bazz_flutter.MainActivity",
-    // "appium:appPackage": "com.bazzptt.bazz_flutter",
-    // "appium:newCommandTimeout": 240,
+    "appium:appActivity": "com.bazzptt.bazz_flutter.MainActivity",
+    "appium:appPackage": "com.bazzptt.bazz_flutter",
+    "appium:newCommandTimeout": 15000,
   },
 ];
 
