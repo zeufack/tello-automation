@@ -7,17 +7,14 @@ const pages = {
   login: LoginPage,
 };
 
-const simPortXpath = `//android.view.View[@content-desc="Define System Domain"]`;
+When(
+  /^The (\w+) fill username and password input and click Login button$/,
+  async (user) => {
+    // await LoginPage.login(username, password);
+  }
+);
 
-Given(/^I am on the login page$/, async () => {
-  const selectSimPort = await $(simPortXpath);
-});
-
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-  // await LoginPage.login(username, password);
-});
-
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
+Then(/^System should not allow access to (.*)$/, async (user) => {
   // await expect(SecurePage.flashAlert).toBeExisting();
   // await expect(SecurePage.flashAlert).toHaveTextContaining(message);
 });
