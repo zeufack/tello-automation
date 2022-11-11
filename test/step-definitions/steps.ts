@@ -7,12 +7,6 @@ const pages = {
   login: LoginPage,
 };
 
-const simPortXpath = `//android.view.View[@content-desc="Define System Domain"]`;
-
-Given(/^I am on the login page$/, async () => {
-  const selectSimPort = await $(simPortXpath);
-});
-
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {
   // await LoginPage.login(username, password);
 });
