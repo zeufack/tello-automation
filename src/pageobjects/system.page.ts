@@ -8,7 +8,7 @@ class SystemPage extends Page {
   proceedButtonXpath = `//android.widget.Button[@content-desc="P​R​O​C​E​E​D"]`;
 
   public get urlInput(): ChainablePromiseElement<WebdriverIO.Element> {
-    return $(``);
+    return $(this.urlInputXpath);
   }
 
   public get simInput(): ChainablePromiseElement<WebdriverIO.Element> {
@@ -19,16 +19,27 @@ class SystemPage extends Page {
     return $(this.proceedButtonXpath);
   }
 
-  public async filUrlInput(url: string) {
+  /**
+   * Fill url input with the given url.
+   * @param url
+   */
+  public async fillUrlInput(url: string) {
     (await this.urlInput).setValue(url);
   }
 
-  public async hintProceedButton() {
-    (await this.proceedButton).click();
+  /**
+   * Fill sim input with the given sim number.
+   * @param simNumber
+   */
+  public async fillSimInput(simNumber: string) {
+    (await this.simInput).click();
   }
 
-  public async filSimInput(simNumber: string) {
-    await this.simInput.click();
+  /**
+   * Go to the next step by clicking on the proceed button.
+   */
+  public async hintProceedButton() {
+    (await this.proceedButton).click();
   }
 }
 

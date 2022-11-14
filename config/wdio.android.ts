@@ -8,7 +8,7 @@ config.capabilities = [
     platformName: "Android",
     maxInstances: 1,
     "appium:autoGrantPermissions": "true",
-    "appium:deviceName": "26719008c51c7ece",
+    "appium:deviceName": "emulator-5554",
     "appium:platformVersion": "10",
     "appium:orientation": "PORTRAIT",
     "appium:automationName": "UiAutomator2",

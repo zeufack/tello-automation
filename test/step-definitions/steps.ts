@@ -7,11 +7,13 @@ const pages = {
   login: LoginPage,
 };
 
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-  // await LoginPage.login(username, password);
+When(/^The (\w+) login$/, async (user) => {
+  await pages.login.login(user);
 });
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
+Then(/^System should not allow access to (.*)$/, async (user) => {
   // await expect(SecurePage.flashAlert).toBeExisting();
   // await expect(SecurePage.flashAlert).toHaveTextContaining(message);
+  expect(await pages.login.loginError).toBeDisplayed();
+  console.log(user);
 });

@@ -1,12 +1,17 @@
 Feature: Log into Tello mobile application
 
-  Scenario: As a user, I can log into my account
+  Scenario: The User can't log in with non-existing credentials
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
+    Given The <User> navigate to the login page
+    When The <User> login
+    Then System should not allow access to <User>
+
 
     Examples:
-      | username | password  | 
-      | Igard    | Igard123  | 
-      | Imana    | Imana123  | 
+      | User                    |
+      | userWithFakeCredentials |
+# | userWithFakePassword     |
+# | userWithFakeUserName     |
+# | userWithEmptyCredentials |
+# | userWithEmptyPasswsord   |
+# | userWithEmptyUserName    |

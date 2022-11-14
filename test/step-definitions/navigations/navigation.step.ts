@@ -5,6 +5,7 @@ const pages = {
   system: systemPage,
 };
 
-Given(/^I am on the login page$/, async () => {
-  pages.system.hintProceedButton();
+Given(/^The (\w+) navigate to the login page$/, async (user) => {
+  console.log(user);
+  await pages.system.hintProceedButton();
 });
