@@ -1,4 +1,3 @@
 # Mobile Test automation for tello project
 
 call appium from typescript with webdriverio.
-
