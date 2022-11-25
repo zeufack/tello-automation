@@ -3,3 +3,4 @@ assets/app
 .wdio-appium.log
 .vscode/
 allure-results/
+allure-report/
