@@ -8,10 +8,10 @@ Feature: Log into Tello mobile application
 
 
     Examples:
-      | User                    |
-      | userWithFakeCredentials |
-# | userWithFakePassword     |
-# | userWithFakeUserName     |
-# | userWithEmptyCredentials |
-# | userWithEmptyPasswsord   |
-# | userWithEmptyUserName    |
+      | User                     |
+      | userWithFakeCredentials  |
+      | userWithFakePassword     |
+      | userWithFakeUserName     |
+      | userWithEmptyCredentials |
+      | userWithEmptyPasswsord   |
+      | userWithEmptyUserName    |

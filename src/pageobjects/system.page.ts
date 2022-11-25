@@ -32,7 +32,10 @@ class SystemPage extends Page {
    * @param simNumber
    */
   public async fillSimInput(simNumber: string) {
-    (await this.simInput).click();
+    const elemt = await this.simInput;
+    const value = await elemt.getValue();
+    await elemt.clearValue();
+    // console.log(`This is `);
   }
 
   /**
