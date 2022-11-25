@@ -8,9 +8,10 @@ config.capabilities = [
     platformName: "Android",
     maxInstances: 1,
     "appium:autoGrantPermissions": "true",
-    "appium:deviceName": "emulator-5554",
+    //"appium:deviceName": "emulator-5554",
+    "appium:deviceName": "26719008c51c7ece",
     "appium:platformVersion": "10",
-    "appium:orientation": "PORTRAIT",
+    // "appium:orientation": "PORTRAIT",
     "appium:automationName": "UiAutomator2",
     // The path to the app
     "appium:app": join(process.cwd(), "./assets/app/tello-app-debug-v2.apk"),

@@ -12,8 +12,5 @@ When(/^The (\w+) login$/, async (user) => {
 });
 
 Then(/^System should not allow access to (.*)$/, async (user) => {
-  // await expect(SecurePage.flashAlert).toBeExisting();
-  // await expect(SecurePage.flashAlert).toHaveTextContaining(message);
   expect(await pages.login.loginError).toBeDisplayed();
-  console.log(user);
 });

@@ -69,7 +69,9 @@ class LoginPage extends Page {
    * @param user
    */
   private async fillLoginFormAndSubmit(user: User) {
+    await (await this.inputUsername).click();
     await (await this.inputUsername).setValue(user.userName.toString());
+    await (await this.inputPassword).click();
     await (
       await this.inputPassword.setValue
     )(user.password);

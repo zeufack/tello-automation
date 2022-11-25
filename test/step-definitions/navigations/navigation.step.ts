@@ -6,6 +6,5 @@ const pages = {
 };
 
 Given(/^The (\w+) navigate to the login page$/, async (user) => {
-  console.log(user);
   await pages.system.hintProceedButton();
 });
