@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "WEB_VIEW_SCREEN: browser.isAndroid? '*//android.webkit.WebView': '*//XCUIElementTypeWebView',"
-}
