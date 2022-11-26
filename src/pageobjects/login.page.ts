@@ -59,6 +59,24 @@ class LoginPage extends Page {
       case "userWithEmptyUserName":
         await this.fillLoginFormAndSubmit(users.userWithEmptyUserName);
         break;
+      case "admin":
+        await this.fillLoginFormAndSubmit(users.adminUser);
+        break;
+      case "operator":
+        await this.fillLoginFormAndSubmit(users.operatorUser);
+        break;
+      case "supervisor":
+        await this.fillLoginFormAndSubmit(users.supervisorUser);
+        break;
+      case "dispatcher":
+        await this.fillLoginFormAndSubmit(users.dispatcherUser);
+        break;
+      case "customerManager":
+        await this.fillLoginFormAndSubmit(users.customerManager);
+        break;
+      case "guard":
+        await this.fillLoginFormAndSubmit(users.guardUser);
+        break;
       default:
         break;
     }
@@ -69,9 +87,12 @@ class LoginPage extends Page {
    * @param user
    */
   private async fillLoginFormAndSubmit(user: User) {
-    await (await this.inputUsername).click();
-    await (await this.inputUsername).setValue(user.userName.toString());
+    await super.sendKeys(this.inputUsername, user.userName);
+    // await (await this.inputUsername).click();
+    // await (await this.inputUsername).clearValue();
+    // await (await this.inputUsername).setValue(user.userName.toString());
     await (await this.inputPassword).click();
+    await (await this.inputPassword).clearValue();
     await (
       await this.inputPassword.setValue
     )(user.password);

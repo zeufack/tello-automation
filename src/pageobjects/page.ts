@@ -1,3 +1,5 @@
+import { ChainablePromiseElement } from "webdriverio";
+
 /**
  * main page object containing all methods, selectors and functionality
  * that is shared across all page objects
@@ -38,4 +40,17 @@ export default class Page {
    * Wait for  1 second befor the next action.
    */
   public shortWait() {}
+
+  /**
+   * Ass it is not possible to send key directly, this function click on a given input, clear it and add value
+   */
+  protected async sendKeys(
+    locator: ChainablePromiseElement<WebdriverIO.Element>,
+    inputValue: string
+  ) {
+    const input = await locator;
+    await input.click();
+    await input.clearValue();
+    await input.setValue(inputValue);
+  }
 }

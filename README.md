@@ -14,10 +14,11 @@ then install dependencies by running
     npm i
 ```
 
-and modify the ./config/wdio.android.ts file and add your mobile device in the config object
+and modify the ./config/wdio.android.ts file and add your mobile device in the config object and apk file path
 
 ```bash
     "appium:deviceName": "your app device name",
+    "appium:app": "path to your apk file"
 ```
 
 You can run all test by running
