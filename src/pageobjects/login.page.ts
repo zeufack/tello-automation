@@ -88,14 +88,8 @@ class LoginPage extends Page {
    */
   private async fillLoginFormAndSubmit(user: User) {
     await super.sendKeys(this.inputUsername, user.userName);
-    // await (await this.inputUsername).click();
-    // await (await this.inputUsername).clearValue();
-    // await (await this.inputUsername).setValue(user.userName.toString());
-    await (await this.inputPassword).click();
-    await (await this.inputPassword).clearValue();
-    await (
-      await this.inputPassword.setValue
-    )(user.password);
+    await super.sendKeys(this.inputPassword, user.password);
+
     await this.btnSubmit.click();
   }
 }
