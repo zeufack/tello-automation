@@ -14,12 +14,16 @@ class LoginPage extends Page {
   passwordInputXpath = "//android.widget.EditText[2]";
   btnSubmitXpath = `//android.widget.Button[@content-desc="L​O​G​I​N"]`;
   loginErrorXpath = `//android.view.View[@content-desc="Login or password is incorrect"]`;
-
+  continueLoginXpath = `//android.widget.Button[@content-desc="C​o​n​t​i​n​u​e"]`;
   /**
    * define selectors using getter methods
    */
   public get inputUsername(): ChainablePromiseElement<WebdriverIO.Element> {
     return $(this.userNameInputXpath);
+  }
+
+  public get continueLogin(): ChainablePromiseElement<WebdriverIO.Element> {
+    return $(this.continueLoginXpath);
   }
 
   public get inputPassword(): ChainablePromiseElement<WebdriverIO.Element> {
@@ -96,6 +100,16 @@ class LoginPage extends Page {
     await (await this.inputPassword).clearValue();
     await (await this.inputPassword).setValue(user.password);
     await this.btnSubmit.click();
+    this.clickContineLoginButton();
+  }
+
+  /**
+   * clickContineLoginButton
+   */
+  private clickContineLoginButton() {
+    if (this.continueLogin.isDisplayed) {
+      this.continueLogin.click();
+    }
   }
 }
 

@@ -26,6 +26,12 @@ class PositionPage {
   }
 
   public async hintAttentionAcceptButton() {
+    driver.waitUntil(
+      async () => await ((await this.attentionAcceptButton) != null),
+      {
+        timeout: 5000,
+      }
+    );
     await (await this.attentionAcceptButton).click();
   }
 }
