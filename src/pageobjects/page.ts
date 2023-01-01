@@ -42,15 +42,17 @@ export default class Page {
   public shortWait() {}
 
   /**
-   * Ass it is not possible to send key directly, this function click on a given input, clear it and add value
+   * As it is not possible to send key directly, this function click on a given input, clear it and add value
    */
   protected async sendKeys(
     locator: ChainablePromiseElement<WebdriverIO.Element>,
     inputValue: string
   ) {
-    const input = await locator;
-    await input.click();
-    await input.clearValue();
-    await input.setValue(inputValue);
+    await locator.click();
+    await locator.clearValue();
+    await locator.setValue(inputValue);
+    // await input.click();
+    // await input.clearValue();
+    // await input.setValue(inputValue);
   }
 }
