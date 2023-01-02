@@ -1,12 +1,10 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
-import LoginPage from "../../src/pageobjects/login.page";
-import SecurePage from "../../src/pageobjects/secure.page";
-import positionPage from "../../src/pageobjects/position.page";
+import LoginScreen from "../../src/ screen_object/login. screen";
+import positionPage from "../../src/ screen_object/position. screen";
 
 const pages = {
-  login: LoginPage,
+  login: LoginScreen,
   position: positionPage,
-  securePage: SecurePage,
 };
 
 When(/^The (\w+) login$/, async (user) => {

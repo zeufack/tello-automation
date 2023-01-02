@@ -1,10 +1,10 @@
 import { Given } from "@wdio/cucumber-framework";
-import loginPage from "../../../src/pageobjects/login.page";
-import systemPage from "../../../src/pageobjects/system.page";
+import LoginScreen from "../../../src/ screen_object/login. screen";
+import SystemScreen from "../../../src/ screen_object/system. screen";
 
 const pages = {
-  system: systemPage,
-  login: loginPage,
+  system: SystemScreen,
+  login: LoginScreen,
 };
 
 Given(/^The (\w+) navigate to the login page$/, async (user) => {
