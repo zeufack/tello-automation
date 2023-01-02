@@ -6,6 +6,7 @@ import positionPage from "../../src/pageobjects/position.page";
 const pages = {
   login: LoginPage,
   position: positionPage,
+  securePage: SecurePage,
 };
 
 When(/^The (\w+) login$/, async (user) => {

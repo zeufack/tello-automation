@@ -16,7 +16,7 @@ class LoginPage extends Page {
   loginErrorXpath = `//android.view.View[@content-desc="Login or password is incorrect"]`;
   continueLoginXpath = `//android.widget.Button[@content-desc="C​o​n​t​i​n​u​e"]`;
   /**
-   * define selectors using getter methods
+   * Define selectors using getter methods
    */
   public get inputUsername(): ChainablePromiseElement<WebdriverIO.Element> {
     return $(this.userNameInputXpath);

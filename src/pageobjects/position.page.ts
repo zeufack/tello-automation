@@ -1,6 +1,7 @@
 import { ChainablePromiseElement } from "webdriverio";
+import Page from "./page";
 
-class PositionPage {
+class PositionPage extends Page {
   private positionButtonXpath: string = `(//android.widget.Button[@content-desc="P​O​S​I​T​I​O​N"])[2]`;
   private userButtonXpath: string = `//android.widget.Button[@content-desc="U​S​E​R"]`;
   private attentionAcceptButtonXpath: string = `//android.widget.Button[@content-desc="Y​e​s"]`;
@@ -25,14 +26,19 @@ class PositionPage {
     await (await this.positionButton).click();
   }
 
+  /**
+   * Wait for the attention box and click ok.
+   */
   public async hintAttentionAcceptButton() {
-    driver.waitUntil(
-      async () => await ((await this.attentionAcceptButton) != null),
-      {
-        timeout: 5000,
-      }
-    );
-    await (await this.attentionAcceptButton).click();
+    if (
+      // (await this.attentionAcceptButton).waitForClickable({
+      //   timeout: 10000,
+      //   reverse: false,
+      // })
+      await super.waitForIsShown(true, this.attentionAcceptButtonXpath)
+    ) {
+      await (await this.attentionAcceptButton).click();
+    }
   }
 }
 

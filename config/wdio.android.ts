@@ -18,7 +18,7 @@ config.capabilities = [
     // @ts-ignore
     "appium:appActivity": "com.bazzptt.bazz_flutter.MainActivity",
     "appium:appPackage": "com.bazzptt.bazz_flutter",
-    "appium:newCommandTimeout": 15000,
+    "appium:newCommandTimeout": 55000,
   },
 ];
 

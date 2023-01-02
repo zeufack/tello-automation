@@ -28,13 +28,27 @@ export default class Page {
 
   /**
    * Wait for 5 second befor the next action.
+   * @param element
+   * @returns
    */
-  public loadingWait() {}
+  public loadingWait(element: string) {
+    return $(element).waitForClickable({
+      timeout: 100000,
+      reverse: false,
+    });
+  }
 
   /**
    * Wait for x second befor the next action.
+   * @param element
+   * @returns
    */
-  public longWait() {}
+  public longWait(element: string) {
+    return $(element).waitForClickable({
+      timeout: 5000000,
+      reverse: false,
+    });
+  }
 
   /**
    * Wait for  1 second befor the next action.
@@ -54,5 +68,21 @@ export default class Page {
     // await input.click();
     // await input.clearValue();
     // await input.setValue(inputValue);
+  }
+
+  /**
+   * Long wait for an element to be displayed on screen
+   * @param isShown
+   * @param element
+   * @returns
+   */
+  protected async waitForIsShown(
+    isShown = true,
+    element: string
+  ): Promise<boolean | void> {
+    return await $(element).waitForDisplayed({
+      timeout: 30000000,
+      reverse: !isShown,
+    });
   }
 }
