@@ -1,6 +1,6 @@
 import { Given } from "@wdio/cucumber-framework";
-import LoginScreen from "../../../src/ screen_object/login. screen";
-import SystemScreen from "../../../src/ screen_object/system. screen";
+import LoginScreen from "../../../src/ screen_object/login.screen";
+import SystemScreen from "../../../src/ screen_object/system.screen";
 
 const pages = {
   system: SystemScreen,

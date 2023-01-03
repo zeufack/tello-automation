@@ -64,9 +64,7 @@ class SystemScreen extends Screens {
 
   public async fillSystemPropertyForUser(user: string) {
     await this.setUserSim(user);
-    // await driver.setImplicitTimeout(10000000000000000);
     await this.hintProceedButton();
-    // await driver.waitUntil();
   }
 }
 

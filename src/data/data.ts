@@ -56,9 +56,9 @@ const supervisorUser: User = {
 
 const driverUser: User = {
   role: Role.Driver,
-  userName: "ldrive",
-  password: "ldrive123",
-  simSerialNumber: "987456321478963",
+  userName: "patrickdrive",
+  password: "patrickdrive123 ",
+  simSerialNumber: "8923700076061417059G01",
 };
 
 const dispatcherUser: User = {
