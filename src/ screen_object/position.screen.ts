@@ -1,7 +1,7 @@
 import { ChainablePromiseElement } from "webdriverio";
-import Page from "./page";
+import Screens from "./ screen";
 
-class PositionPage extends Page {
+class PositionScreen extends Screens {
   private positionButtonXpath: string = `(//android.widget.Button[@content-desc="P​O​S​I​T​I​O​N"])[2]`;
   private userButtonXpath: string = `//android.widget.Button[@content-desc="U​S​E​R"]`;
   private attentionAcceptButtonXpath: string = `//android.widget.Button[@content-desc="Y​e​s"]`;
@@ -42,4 +42,4 @@ class PositionPage extends Page {
   }
 }
 
-export default new PositionPage();
+export default new PositionScreen();

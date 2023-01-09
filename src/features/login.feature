@@ -18,14 +18,15 @@ Feature: Log into Tello mobile application
   Scenario Outline: Log in with different type account
     Given The <User> navigate to the login page
     When The <User> login
-    # Then System should not allow access to <User>
-    # And The <User> log out
+    Then System should allow access to <User>
+    And The <User> log out
 
     Examples:
       | User  |
       # | admin |
       # | operator        |
       | guard |
+      | drive |
 # | supervisor      |
 # | dispatcher      |
 # | customerManager |

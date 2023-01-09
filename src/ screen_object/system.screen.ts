@@ -1,8 +1,8 @@
 import { ChainablePromiseElement } from "webdriverio";
 import { data } from "../data/data";
-import Page from "./page";
+import Screens from "./ screen";
 
-class SystemPage extends Page {
+class SystemScreen extends Screens {
   urlInputXpath = `//android.widget.EditText[1]`;
   simPortXpath = `//android.widget.EditText[2]`;
   proceedButtonXpath = `//android.widget.Button[@content-desc="P​R​O​C​E​E​D"]`;
@@ -64,10 +64,8 @@ class SystemPage extends Page {
 
   public async fillSystemPropertyForUser(user: string) {
     await this.setUserSim(user);
-    // await driver.setImplicitTimeout(10000000000000000);
     await this.hintProceedButton();
-    // await driver.waitUntil();
   }
 }
 
-export default new SystemPage();
+export default new SystemScreen();

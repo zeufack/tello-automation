@@ -1,20 +1,12 @@
 import { ChainablePromiseElement } from "webdriverio";
 
 /**
- * main page object containing all methods, selectors and functionality
- * that is shared across all page objects
+ * main  Screen object containing all methods, selectors and functionality
+ * that is shared across all  Screen objects
  */
-export default class Page {
+export default class Screens {
   /**
-   * Opens a sub page of the page
-   * @param path path of the sub page (e.g. /path/to/page.html)
-   */
-  public open(path: string) {
-    return browser.url(`https://the-internet.herokuapp.com/${path}`);
-  }
-
-  /**
-   * Locate an element on the page an tap on it.
+   * Locate an element on the  Screen an tap on it.
    * @param locator
    */
   public findAndClick(locator: string): void {}

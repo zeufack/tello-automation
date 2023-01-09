@@ -2,12 +2,12 @@ import { ChainablePromiseElement } from "webdriverio";
 import { User } from "../data";
 import { data } from "../data/data";
 
-import Page from "./page";
+import Screens from "./ screen";
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+class LoginScreen extends Screens {
   private users = data.users;
 
   userNameInputXpath = "//android.widget.EditText[1]";
@@ -91,8 +91,6 @@ class LoginPage extends Page {
    * @param user
    */
   private async fillLoginFormAndSubmit(user: User) {
-    // await super.sendKeys(this.inputUsername, user.userName);
-    // await super.sendKeys(this.inputPassword, user.password);
     await (await this.inputUsername).click();
     await (await this.inputUsername).clearValue();
     await (await this.inputUsername).setValue(user.userName);
@@ -113,4 +111,4 @@ class LoginPage extends Page {
   }
 }
 
-export default new LoginPage();
+export default new LoginScreen();
